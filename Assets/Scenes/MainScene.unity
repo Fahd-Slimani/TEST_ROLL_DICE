@@ -1290,7 +1290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e17aef2e8910d047ae8c544014c3d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentGameplay: 1
+  currentGameplay: 0
+  gamePlayOption: 1
   additionalScoreText: {fileID: 554899176}
 --- !u!4 &1227599781
 Transform:

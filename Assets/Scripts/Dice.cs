@@ -1,7 +1,7 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Dice : Singleton<Dice>
 {
     private Rigidbody rb;
@@ -90,6 +90,7 @@ public class Dice : Singleton<Dice>
         {
             diceResult = int.Parse(hit.collider.gameObject.name);
             OnDiceRolled?.Invoke(diceResult);  // Only invoke if there's at least one listener
+
             lastDiceRoll = diceResult; // Store the last dice roll
         }
     }
