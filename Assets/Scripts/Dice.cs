@@ -12,12 +12,13 @@ public class Dice : Singleton<Dice>
     private Quaternion targetRotation;
 
     public float snapSpeed = 10f;
-    public float rollingSpeed = 15f;
+    public float rollingSpeed = 12;
 
     // triggered when the dice ends rolling
     public Action<int> OnDiceRolled;
 
     private int diceResult;
+    public int lastDiceRoll;
 
     void Start() => rb = GetComponent<Rigidbody>();
 
@@ -89,6 +90,7 @@ public class Dice : Singleton<Dice>
         {
             diceResult = int.Parse(hit.collider.gameObject.name);
             OnDiceRolled?.Invoke(diceResult);  // Only invoke if there's at least one listener
+            lastDiceRoll = diceResult; // Store the last dice roll
         }
     }
 }

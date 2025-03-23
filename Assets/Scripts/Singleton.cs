@@ -4,7 +4,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance;
 
-    // Property of the instance
+    // Property to access the instance
     public static T Instance
     {
         get
@@ -25,7 +25,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-    // Make sur that there is only one instance of the singleton in the scene
+    // Ensure that there is only one instance of the singleton in the scene
     private void Awake()
     {
         // If the instance already exists and it's not this instance, destroy the new object
