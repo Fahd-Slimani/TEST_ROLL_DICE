@@ -72,17 +72,15 @@ public class GameManager : Singleton<GameManager>
             diceRoll++; // Bonus increment for rolling a 6
 
             VisualFeedback(1 + optionPoints);
-            IncreaseScore(diceRoll + optionPoints);
         }
         else
         {
             // Handle additional points for special consecutive roll conditions
             if (optionPoints > 0)
-            {
-                IncreaseScore(optionPoints);
                 additionalScoreText.SetAdditionalScore(optionPoints);
-            }
         }
+
+        IncreaseScore(diceRoll + optionPoints);
     }
 
     // Checks if special gameplay options apply to modify score calculation
