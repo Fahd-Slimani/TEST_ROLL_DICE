@@ -1,16 +1,16 @@
 public enum Gameplay
 {
-    // DEFAULT : Required gameplay
-    Collect_6, // the score increases by 1 only if the dice's roll is 6
+    // Main gameplay mode
+    Collect_6, // Score increases by 1 only when the dice roll is a 6
 
-    // BONUS Potenial gamplay : IDEA = Reach the maximum score in a defined time (exp : 1 minute)
-    Collect_all, // the score keep increasing by every dice's roll, if the roll is 6, an additional point is gained
+    // Extra gameplay mode: Exemple of an idea : Goal is to reach the highest score in a set time (exp 1 minute sessions)
+    Collect_all, // Score increases with every dice roll. If the roll is 6, an extra point is added.
 }
 
-// OPTIONAL/ADDITIONAL EXTRA SCORING
+// Extra scoring options (optional)
 public enum GameplayOptions
 {
-    None, // DEFAULT
-    Collect_consecutives // the score increases by 1 only if we have a consecutive dice rolls,
-                         // in case of consecutive 6, an additional point is gained
+    None, // Default (no extra scoring)
+    Collect_consecutives // Score increases by 1 for consecutive rolls.  
+                         // If two 6s are rolled in a row, an extra point is added.
 }
